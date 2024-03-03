@@ -68,13 +68,13 @@ Set_pip_Mirror() {
   ${Green_font_prefix} 1.${Font_color_suffix} 默认
   ${Green_font_prefix} 2.${Font_color_suffix} 清华源"
   read -erp "请输入数字 [1-2], 默认为 1:" mirror_num
-  [[ -z "${mirror_num}" ]] && mirror_num=1
+  [[ -z "${mirror_num}" ]] && mirror_num=2
   [[ ${mirror_num} == 2 ]] && mirror_url="https://pypi.tuna.tsinghua.edu.cn/simple"
 }
 
 Set_ghproxy() {
   echo -e "${Info} 是否使用 ghproxy 代理git相关的下载？(中国大陆建议使用)"
-  read -erp "请选择 [y/n], 默认为 y:" ghproxy_check
+  read -erp "请选择 [y/n], 默认为 y:" ghproxy
   [[ -z "${ghproxy_check}" ]] && ghproxy_check='y'
   [[ ${ghproxy_check} == 'n' ]] && ghproxy=""
 }
